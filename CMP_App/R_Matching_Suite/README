@@ -1,0 +1,37 @@
+# R Matching Suite Overview
+
+The R Matching Suite is a collection of functions designed to facilitate the processing and analysis of OCT (Optical Coherence Tomography) data, particularly in the context of matching and aligning different data sources.
+
+## Functions
+
+### SLO_to_CMP_Maps
+    - This function takes a map image, a CMP (Confocal Microscopy) fundus image, and a matching object, and maps the map image to the CMP fundus image.
+    - It can handle full CMP images or cropped versions, and returns the transformed map image.
+
+### OCT_to_CMP
+    - This function takes OCT coordinates (X and Y) and a matching object, and transforms the coordinates to CMP coordinates.
+    - It applies the forward transformation from the matching object and shifts the transformed coordinates to the original CMP fundus position.
+    - The function returns the transformed coordinates as a data frame.
+
+### CMP_to_OCT
+    - This function takes CMP coordinates (X and Y) and a matching object, and transforms the coordinates to OCT coordinates.
+    - It applies the reverse transformation from the matching object and returns the transformed coordinates as a data frame.
+
+### Overlay_Maps
+    - This function takes a fundus image and a map image, and overlays the map image on the fundus image.
+    - It can handle replacing the fundus image with the map image, adding a pedestal, and normalizing the color scale.
+    - The function returns the final overlaid image as a raster.
+
+### openVol
+    - This function is used to open an OCT volume file from the Heidelberg Spectralis device.
+    - It reads the header information, SLO image, B-scans, and segmentation data from the file.
+    - The function can be run in "quickFovea" or "quickSegm" mode to only read the necessary data.
+    - It returns the data in a list, with elements for the SLO image, header information, and B-scan header data.
+
+### FixScanSize
+    - This function is used to fix the scan size of an OCT volume.
+    - It checks if the SLO image size is greater than 768x768, and if so, rescales the SLO image, B-scans, and segmentation data to 768x768.
+    - It also updates the header information to reflect the new scan size.
+    - The function returns the updated OCT data.
+
+These functions are designed to work together to facilitate the processing and analysis of OCT data, particularly in the context of matching and aligning different data sources. They can be used as part of a larger image processing and analysis pipeline.

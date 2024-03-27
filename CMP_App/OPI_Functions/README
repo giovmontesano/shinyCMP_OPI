@@ -1,0 +1,33 @@
+# OPI Functions
+
+The OPI Functions folder contains a collection of files that are used to facilitate the processing and analysis of Optical Coherence Tomography (OCT) data, particularly in the context of matching and aligning different data sources.
+
+## Files
+
+### PriorMod.RData
+    - This file contains the stage models that are used to set the starting priors for the ZEST algorithm.
+
+### ZEST_Curves.csv
+    - This file contains the ZEST curves that are used to create the bimodal ZEST PDF.
+
+### ZEST_Step.R
+    - This file contains the `ZEST.step` function, which is used to step the ZEST algorithm.
+
+### devConnect.R
+    - This file contains the functions used to connect to the OPI device and acquire data.
+
+### setupZEST.R
+    - This file contains the functions used to set up the starting states and priors for the ZEST algorithm.
+
+### setupZEST_Str.R
+    - This file contains the functions used to set up the starting states and priors for the ZEST algorithm, taking into account the structural data.
+
+## Overview
+
+The OPI Functions folder provides a set of tools and utilities that are used to process and analyze OCT data. The key components are:
+
+- The stage models and ZEST curves, which are used to set the starting priors for the ZEST algorithm.
+- The functions for connecting to the OPI device and acquiring data.
+- The functions for setting up the starting states and priors for the ZEST algorithm, with and without structural data.
+
+These components work together to facilitate the processing and analysis of OCT data, particularly in the context of matching and aligning different data sources. They can be used as part of a larger image processing and analysis pipeline.
