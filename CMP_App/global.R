@@ -65,8 +65,8 @@ NHood <- function(X, Y, DistLim = 2.9){
 # Sources Drasdo and matching/reading functions for OCT data
 source("DrasdoFunctions.R")
 source("R_Matching_Suite/openVol_Source.R")
-source("R_Matching_Suite/MatchSegmentation_Source.R")
-source("R_Matching_Suite/MatchSegmentationONH_Source.R")
+source("R_Matching_Suite/MatchSegmentationVolMac_Source.R")
+source("R_Matching_Suite/MatchSegmentationVolONH_Source.R")
 source("R_Matching_Suite/FoveaDetection_Source.R")
 source("R_Matching_Suite/FundusMatch_Source.R")
 source("R_Matching_Suite/SLO_to_CMP_Maps_Source.R")

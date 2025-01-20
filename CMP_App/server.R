@@ -357,7 +357,7 @@ server <- function(input, output, session) {
     updateSelectInput(session, "segmList", choices = c(Layer_List, "None"))
     updateSelectInput(session, "segmListStrat", choices = c(Layer_List, "None"), selected = "GCL")
     
-    SEG_List <- MatchSegmentation(OCT_Data$BScanHeader, OCT_Data$Header, Layer_List)
+    SEG_List <- MatchSegmentationVolMac(OCT_Data$BScanHeader, OCT_Data$Header, Layer_List)
     updateTextInput(session, inputId = "isAligned", value = "Not aligned!")
     
     #Calculates overlays
@@ -514,7 +514,7 @@ server <- function(input, output, session) {
     updateSelectInput(session, "segmListONH", choices = c(Layer_List, "None"))
     updateTextInput(session, inputId = "isAlignedONH", value = "Not aligned!")
     
-    NFL_Seg <- MatchSegmentationONH(OCT_Data$BScanHeader, OCT_Data$Header)
+    NFL_Seg <- MatchSegmentationVolONH(OCT_Data$BScanHeader, OCT_Data$Header)
     
     ColMap <- data.frame(c = colorRampPalette(Parula_Map$Hex)(100),
                          Th = seq(0, 200, length.out = 100))
